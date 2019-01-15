@@ -1,8 +1,8 @@
-var event, ok;
-
+let event, ok;
+let money=0;
 do {//Выводим первый вопрос
     ok = false;
-    event = +prompt(works.a00 + works.a1 + works.a2 + '-1 - Выход из игры');
+    event = +prompt(works.a00 + works.a1 + works.a2 + works.a3+works.a4+'-1 - Выход из игры');
     if (event == -1) {
         break;
     }
@@ -10,101 +10,31 @@ do {//Выводим первый вопрос
         ok = isAnswer(works.a0, event);
     }
 } while (!ok);
-switch (event) {
-    case 1: // Первое действие  - если в первом окне ввели 1 то открываем серию окон - окно 2
-        do {
-            ok = false;
-            event = +prompt(works.b00 + works.b1 + works.b2 + '-1 - Выход из игры');
-            if (event == -1) {
-                break;
+if (event===2) {
+    money+=100;
+    event = +prompt(works.b00 + works.b1 + works.b2 + works.b3 + works.b4 + '-1 - Выход из игры');
+    if(event===4){
+        money+=150;
+        event = +prompt(works.c00 + works.c1 + works.c2 + works.c3 + works.c4 + '-1 - Выход из игры');
+        if(event===3){
+            money+=250;
+            event = +prompt(works.d00 + works.d1 + works.d2 + works.d3 + works.d4 + '-1 - Выход из игры');
+            if(event===4){
+                money+=500;
+                alert('Поздравляем!');
+            }else{
+                fail();
             }
-            else {
-                ok = isAnswer(works.b0, event);
-            }
-        } while (!ok);
-        switch (event) {
-            case 1: // Второе действие, если во 2 окне ввели 1 то переходим на 4 окно
-                do {
-                    ok = false;
-                    event = +prompt(works.d00 + works.d1 + works.d2 + '-1 - Выход из игры');
-                    if (event == -1) {
-                        break;
-                    }
-                    else {
-                        ok = isAnswer(works.d0, event);
-                    }
-                } while (!ok);
-
-                break;
-            case 2: // Второе действие   Если ввели 2 то также переходим на 4 окно
-                do {
-                    ok = false;
-                    event = +prompt(works.d00 + works.d1 + works.d2 + '-1 - Выход из игры');
-                    if (event == -1) {
-                        break;
-                    }
-                    else {
-                        ok = isAnswer(works.d0, event);
-                    }
-                } while (!ok);
-
-                break;
-            case -1: // Второе действие
-                break;
-            default:
-                alert('Ошибка');
+        }else{
+            fail();
         }
-        break;
-    case 2: // Первое действие    Если в 1 окне ввели 2 то переходим к 3 окну
-        do {
-            ok = false;
-            event = +prompt(works.c00 + works.c1 + works.c2 + '-1 - Выход из игры');
-            if (event == -1) {
-                break;
-            }
-            else {
-                ok = isAnswer(works.c0, event);
-            }
-        } while (!ok);
-        switch (event) {
-            case 1: // Второе действие
-                do {
-                    ok = false;
-                    event = +prompt(works.d00 + works.d1 + works.d2 + '-1 - Выход из игры');
-                    if (event == -1) {
-                        break;
-                    }
-                    else {
-                        ok = isAnswer(works.d0, event);
-                    }
-                } while (!ok);
-
-                break;
-            case 2: // Второе действие
-                do {
-                    ok = false;
-                    event = +prompt(works.d00 + works.d1 + works.d2 + '-1 - Выход из игры');
-                    if (event == -1) {
-                        break;
-                    }
-                    else {
-                        ok = isAnswer(works.d0, event);
-                    }
-                } while (!ok);
-
-                break;
-            case -1: // Второе действие
-                break;
-            default:
-                alert('Ошибка');
-        }
-        break;
-    case -1: // Первое действие
-        break;
-    default:
-        alert('Ошибка');
+    }else{
+        fail();
+    }
+}else{
+    fail();
 }
-alert('Спасибо за игру');
+alert(`Спасибо за игру, вы дошли до суммы в ${money} рублей!`);
 
 //------------------------------------------
 function isAnswer(q, event) {
@@ -118,4 +48,7 @@ function isAnswer(q, event) {
     }
     return true;
 
+}
+function fail(){
+    alert('Это неверный ответ!');
 }
