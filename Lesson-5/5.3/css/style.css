@@ -1,5 +1,10 @@
+body{
+    overflow: hidden;
+}
 .wrap{
     display: flex;
+    width: 100vw;
+    height: 100vh;
 }
 .black{
     background: gray;
@@ -15,18 +20,20 @@
     border: none;
     background: transparent;
 }
-
-table, tr, td{
-    margin: 0 auto;
+table{
+    overflow: hidden;
+    height: 100vh;
+    width: 99vw;
+}
+tr, td{
+    margin: 0;
     border:1px solid black;
     text-align: center;
-    font-size: 40px;
+    font-size: 5vh;
     font-weight: bold;
     font-family: Helvetica-Narrow sans-serif;
 }
 tr,td{
-    width: 60px;
-    height: 60px;
 }
 .chess-white{
     color: #c8b39a;
@@ -34,3 +41,13 @@ tr,td{
 .chess-black{
     color: saddlebrown;
 }
+.chess-black,.chess-white{
+    cursor: pointer;
+}
+.chess-white:hover{
+    color: #9c886f;
+}
+.chess-black:hover{
+    color: #673213;
+}
+
