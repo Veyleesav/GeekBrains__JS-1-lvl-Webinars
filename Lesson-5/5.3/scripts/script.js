@@ -130,21 +130,27 @@ document.body.appendChild(wrap);
     function chessFigures(firstLet,secondLet,arr){
         if (isTrue(1,8,1,8) ){
             col.innerHTML=arr[3];
+            col.classList.add('rook');
         }
         if (isTrue(1,8,2,7) ){
             col.innerHTML=arr[1];
+            col.classList.add('knight');
         }
         if (isTrue(1,8,3,6) ){
             col.innerHTML=arr[2];
+            col.classList.add('bishop');
         }
         if(firstLet===2&&secondLet!==0&&secondLet!==9||firstLet===7&&secondLet!==0&&secondLet!==9){
             col.innerHTML=arr[0];
+            col.classList.add('pawn');
         }
         if (firstLet===1&&secondLet===4||firstLet===8&&secondLet==4){
                 col.innerHTML=arr[5];
+            col.classList.add('queen');
         }
         if (firstLet===1&&secondLet===5||firstLet===8&&secondLet==5){
             col.innerHTML=arr[6];
+            col.classList.add('king');
         }
         if(firstLet===1&&secondLet!==0&&secondLet!==9||firstLet===2&&secondLet!==0&&secondLet!==9){
             col.classList.add('chess-white');
