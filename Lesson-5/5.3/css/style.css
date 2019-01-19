@@ -1,0 +1,36 @@
+.wrap{
+    display: flex;
+}
+.black{
+    background: gray;
+    border-collapse: collapse;
+}
+.white{
+    background: #e8e8e8;
+}
+.rotated{
+    transform: rotate(180deg);
+}
+.outer{
+    border: none;
+    background: transparent;
+}
+
+table, tr, td{
+    margin: 0 auto;
+    border:1px solid black;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Helvetica-Narrow sans-serif;
+}
+tr,td{
+    width: 60px;
+    height: 60px;
+}
+.chess-white{
+    color: #c8b39a;
+}
+.chess-black{
+    color: saddlebrown;
+}
