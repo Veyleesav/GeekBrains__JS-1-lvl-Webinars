@@ -1,0 +1,53 @@
+body{
+    overflow: hidden;
+}
+.wrap{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.black{
+    background: gray;
+    border-collapse: collapse;
+}
+.white{
+    background: #e8e8e8;
+}
+.rotated{
+    transform: rotate(180deg);
+}
+.outer{
+    border: none;
+    background: transparent;
+}
+table{
+    overflow: hidden;
+    height: 100vh;
+    width: 99vw;
+}
+tr, td{
+    margin: 0;
+    border:1px solid black;
+    text-align: center;
+    font-size: 5vh;
+    font-weight: bold;
+    font-family: Helvetica-Narrow sans-serif;
+}
+tr,td{
+}
+.chess-white{
+    color: #c8b39a;
+}
+.chess-black{
+    color: saddlebrown;
+}
+.chess-black,.chess-white{
+    cursor: pointer;
+}
+.chess-white:hover{
+    color: #9c886f;
+}
+.chess-black:hover{
+    color: #673213;
+}
+

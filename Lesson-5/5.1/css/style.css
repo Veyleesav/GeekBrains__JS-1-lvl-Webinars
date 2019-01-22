@@ -1,0 +1,31 @@
+.wrap{
+    display: flex;
+    border: 1px solid red;
+}
+.black{
+    background: gray;
+    border-collapse: collapse;
+}
+.white{
+    background: #e8e8e8;
+}
+.rotated{
+    transform: rotate(180deg);
+}
+.outer{
+    border: none;
+    background: transparent;
+}
+
+table, tr, td{
+    margin: 0 auto;
+    border:1px solid black;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Helvetica-Narrow sans-serif;
+}
+tr,td{
+    width: 60px;
+    height: 60px;
+}
