@@ -25,7 +25,7 @@ function ready() {
             let price = Number(this.dataset.content);
             let name = this.dataset.name;
                 cart.classList.remove('hidden');
-            
+
             if (!cartTotal.hasOwnProperty(name)){
                 cartTotal[name]={
                     name: name,
