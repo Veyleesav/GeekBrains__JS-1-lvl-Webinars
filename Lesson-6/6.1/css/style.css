@@ -1,0 +1,20 @@
+.wrapper{
+    display: flex;
+    flex-flow: column;
+
+}
+.small-wrapper{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.big-wrapper{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.small{
+    max-width: 30vw;
+    margin: 1vw;
+    cursor: pointer;
+}

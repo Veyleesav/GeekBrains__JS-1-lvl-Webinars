@@ -1,0 +1,30 @@
+.wrapper{
+    display: flex;
+    flex-flow: column;
+
+}
+.small-wrapper{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.big-wrapper{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+.small{
+    max-width: 30vw;
+    margin: 1vw;
+    cursor: pointer;
+}
+.arrow{
+    font-weight: 700;
+    font-family: Helvetica sans-serif;
+    font-size:30vh;
+    cursor: pointer;
+}
+.arrow:hover{
+    color: #212121;;
+}
